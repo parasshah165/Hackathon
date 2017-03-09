@@ -1,0 +1,11 @@
+demo.assetservice:
+  assetURLPrefix: https://predix-asset.run.aws-usw02-pr.ice.predix.io
+  latestQueryUrlPrefix: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/datapoints/latest
+  zoneId: 7c1b697b-fc18-4f81-847c-d95d0c326ab1
+  timeSeriesZoneId: 45a7bdda-bda7-46ef-a0d3-23ca31239969
+security.oauth2.client:
+  clientId: mvp3_ref_app
+  clientSecret: mvp3ref@pp
+  accessTokenUri: https://51647c34-8e4a-4813-84d1-645ea407c678.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
+  userAuthorizationUri: https://51647c34-8e4a-4813-84d1-645ea407c678.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/authorize
+  tokenName: oauth_token

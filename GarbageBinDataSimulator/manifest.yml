@@ -1,0 +1,9 @@
+---
+applications:
+- name: GarbageBinDataSimulator
+  buildpack: java-buildpack
+  memory: 640M
+  #stack: cflinuxfs2
+  path: target/GarbageBinDataSimulator-0.0.1-SNAPSHOT.jar
+env:
+    SPRING_PROFILES_ACTIVE : cloud,clouddev
