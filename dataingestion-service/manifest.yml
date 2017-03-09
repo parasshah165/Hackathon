@@ -1,0 +1,27 @@
+---
+applications:
+  - name: cargo-monitoring-dataingestion
+    buildpack: java_buildpack
+    path: target/CargoMonitoringBoot-service-1.0.0.jar
+    services:
+      - cargo-predix-asset
+      - ts-test
+      - cargo_uaa_new1  
+env:
+    SPRING_PROFILES_ACTIVE : cloud,clouddev
+    predix_asset_name: cargo_asset
+    predix_timeseries_name: ts-test
+    #predix_oauthRestHost: 2dc3d672-d5ce-41c9-8aad-1f50c697542d.predix-uaa.run.aws-usw02-pr.ice.predix.io
+    predix_oauthRestHost: aef00dc9-c187-4ba2-ab80-a883c94dec33.predix-uaa.run.aws-usw02-pr.ice.predix.io
+    #predix_oauthClientId: admin:cargo_beta
+    predix_oauthClientId: beta:beta
+    #trustedIssuerIdsRegexPattern: ^https://(.*\\.)?2dc3d672-d5ce-41c9-8aad-1f50c697542d.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token$
+    trustedIssuerIdsRegexPattern: ^https://(.*\\.)?aef00dc9-c187-4ba2-ab80-a883c94dec33.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token$
+    #accessTokenEndpointUrl : https://2dc3d672-d5ce-41c9-8aad-1f50c697542d.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
+    accessTokenEndpointUrl : https://aef00dc9-c187-4ba2-ab80-a883c94dec33.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token    
+    clientId : beta
+    clientSecret: beta
+    #acsUri : https://acs-staging.grc-apps.svc.ice.ge.com
+    #acsSubZone : rmdsubdomain
+    predixWebSocketURI: wss://cargo-ui-socket.run.aws-usw02-pr.ice.predix.io/livestream/messages
+    #predixWebSocketURI: ws://localhost:9199/livestream/messages
